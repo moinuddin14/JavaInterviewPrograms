@@ -2,28 +2,39 @@ package com.java.programs;
 
 public class PrintPyramid {
     public static void main(String[] args) {
-        printPyramid(6);
+        printPyramid(7);
     }
 
     public static void printPyramid(int evenNumber) {
-        System.out.println("#");
-        for(int i = evenNumber; i >= 1; i--) {
-            for(int j = 1; j <= i; j++) {
+        printSpaces(evenNumber+1);
+        System.out.println("*");
+
+        for(int i = evenNumber; i >=1; i--) {
+            for(int j = 0; j <= i; j++) {
                 System.out.print(" ");
             }
-            System.out.print("#");
-            for(int k = evenNumber; k >= i; k--) {
+            for(int k= i;k >= i;k--) {
+                System.out.print("*");
+            }
+            for(int l = evenNumber;l >= i;l--) {
                 System.out.print(" ");
             }
-            for(int k = evenNumber; k >= i; k--) {
+            for(int l = evenNumber-1;l >= i;l--) {
                 System.out.print(" ");
             }
-            System.out.print("#");
+            for(int k= i;k >= i;k--) {
+                System.out.print("*");
+            }
             System.out.println("");
         }
+        for(int i = 0;i <= (evenNumber+1); i++) {
+            System.out.print(" *");
+        }
+    }
 
-        for(int i = evenNumber+1; i >= 0; i--) {
-            System.out.print("# ");
+    public static void printSpaces(int num) {
+        for(int i = 0;i<=num; i++) {
+            System.out.print(" ");
         }
     }
 }
