@@ -21,3 +21,6 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: Using default environment variable
+        run: echo "Deploying to production server on branch $GITHUB_REF"
